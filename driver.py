@@ -1,35 +1,47 @@
-import logging
-import os
+x=int(input('enter no of inputs \n'))
+k=l=m=n=o=p=0
+for i in range(1,x):
+    a=input("please enter the input \n")
+    if 'employee' in a:
+        k=1
+        print("employee are doing thier job to save nature because every one is connected to nature")
+    if 'nature' in a:
+        l=1
+        print("all employee and employer are directly inherent to nature")
+    if 'employer' in a:
+        m=1
+        print('All employee and employer are doing a meeting and everyone inherently connected to nature')
+    if 'cabin' in a:
+        n=1
+        print('All employee and employer are in a cabin and everyone inherently connected to nature')
+    if 'meeting' in a:
+        o=1
+        print('All employee and employer are sitting in a cabin,all furniture is inherently connected to nature ')
+    if 'furniture' in a:
+        p=1
 
-#Reads and returns the list of files from a directory
-def read_directory(mypath):
-    current_list_of_files = []
+    if k==1:
+        if l==1:
+            if m==1:
+                if n==1:
+                    if o==1:
+                        if p==1:
+                            print('All employee and employer are sitting on furniture in a cabin,all furniture is inherently connected to nature ')
+                    else:
+                        print('All employee and employer are sitting in a cabin,all furniture is inherently connected to nature ')
+                else:
+                    print('All employee and employer are in a cabin and everyone inherently connected to nature')
+            else:
+                print('All employee and employer are doing a meeting and everyone inherently connected to nature')
+        else:
+            print("all employee and employer are directly inherent to nature")
+    else:
+        print("employee are doing thier job to save nature because every one is connected to nature")
+        
+                            
+                            
+            
+        
 
-    while True:
-        for (_, _, filenames) in os.walk(mypath):
-            current_list_of_files = filenames
-        logging.info("Reading the directory for the list of file names")
-        return current_list_of_files
-
-
-# Function you will be working with
-def create_knowledge_graph(contents_of_input_file, name_of_input_file):
-    # Through this function you have to use the contents of each file to create a knowledge graph
-    # The output has to be saved in the data/output folder with the same name as data/input file
-    # Note the writing to file has to be handled by you.
-    pass
-
-#Main function
-if __name__ == '__main__':
-    logging.basicConfig(level=logging.INFO, format='%(asctime)s:%(levelname)s:%(message)s')
-
-    #Folder where the input files are present
-    mypath = "data//input"
-    list_of_input_files = read_directory(mypath)
-    logging.debug(list_of_input_files)
-    for each_file in list_of_input_files:
-        with open(os.path.join(mypath,each_file), "r") as f:
-            file_contents = f.read()
-
-            create_knowledge_graph(file_contents, each_file)
-            # end of code
+    
+    
