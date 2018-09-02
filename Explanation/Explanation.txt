@@ -1,0 +1,4 @@
+explanation
+simply i applied if else to check the strings.
+limited no od data 
+
